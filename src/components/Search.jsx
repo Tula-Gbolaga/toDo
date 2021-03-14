@@ -19,15 +19,17 @@ export class Search extends Component
         const todos = this.props.todos.filter( t => t.title.toLowerCase().includes( v ) );
 
         return (
-            <div>
-                <input
-                    className="search"
-                    onChange={ this.changeHandler } type="text"
-                    placeholder="Search by title"
-                />
+            <>
+                <div className="search">
+                    <input
+                        onChange={ this.changeHandler } type="text"
+                        placeholder="Search by title"
+                    />
+                </div>
                 <ToDoList todos={ todos }
                     changeStatus={ this.props.changeStatus } />
-            </div> );
+            </>
+        );
     }
 }
 
