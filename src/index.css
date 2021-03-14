@@ -1,13 +1,169 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root
+{
+  --bg: #fbbb95;
+  --task: #054880;
+  --time: #868585;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body 
+{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg);
+  min-height: 100vh;
+  max-width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+li
+{
+  list-style-type: none;
+}
+
+button
+{
+  outline: none;
+  cursor: pointer;
+}
+
+
+.main
+{
+  background-color: #fff;
+  border-radius: 5px;
+  width: 90vw;
+  max-width: 450px;
+  margin: auto;
+  box-shadow: 1px 5px 6px 0px #201f1f;
+
+}
+
+.header
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid var(--time);
+}
+
+.todo-list
+{
+  padding: 10px;
+}
+
+.todo-item
+{
+  display: grid;
+  grid-template-columns : 10% 60% 30%;
+  grid-column-gap: 5px;
+  align-items: center; 
+  padding: 10px 0;
+  font-size: 18px;
+  border-bottom: 1px solid #313131;
+}
+
+.todo-item input
+{
+  transform: scale(1.5);
+  display: block;
+  margin-left: 10px;
+}
+
+.title
+{
+  color: var(--task);
+}
+
+.time
+{
+  color: var(--time);
+}
+
+.filters
+{
+  background-color: #313131;
+  color: #fff;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+
+}
+
+.filters label
+{
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+ 
+}
+
+.filters p
+{
+  margin-left: 10px;
+}
+
+
+.footer
+{
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.search
+{
+  display: block;
+  width: 100%;
+  padding: 10px;
+
+}
+
+
+.overlay
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom:0;
+  background:#3131314f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+
+}
+
+.createForm
+{
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+.createForm > *
+{
+  margin-bottom: 10px;
+}
+
+.createForm input
+{
+  padding: 10px 15px;
 }
